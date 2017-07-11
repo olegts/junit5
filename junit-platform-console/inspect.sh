@@ -13,7 +13,3 @@ ${JAVA_HOME}/bin/jdeps build/libs/junit-platform-console-1.0.0-SNAPSHOT.jar
 echo
 echo "*** Automatic module preview ***"
 ${JAVA_HOME}/bin/jar -d --file=build/libs/junit-platform-console-1.0.0-SNAPSHOT.jar
-
-echo
-echo "*** Automatic module preview for jopt-simple lib ***"
-${JAVA_HOME}/bin/jar -d --file=lib/jopt-simple-5.0.3.jar
