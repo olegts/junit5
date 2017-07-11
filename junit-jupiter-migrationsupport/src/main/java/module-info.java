@@ -1,4 +1,4 @@
-module junit.jupiter.params {
+module junit.jupiter.migrationsupport {
     requires junit.jupiter.api;
     requires junit.platform.commons;
 
