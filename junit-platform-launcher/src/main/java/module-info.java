@@ -7,4 +7,6 @@ module junit.platform.launcher {
     exports org.junit.platform.launcher;
     exports org.junit.platform.launcher.core;
     exports org.junit.platform.launcher.listeners;
+
+    uses org.junit.platform.launcher.TestExecutionListener;
 }
