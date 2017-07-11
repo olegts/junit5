@@ -23,3 +23,8 @@ bin/
 *.graphml
 coverage.db*
 clover.license
+
+mlib/
+mods/
+out/
+.DS_Store
