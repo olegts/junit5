@@ -9,6 +9,4 @@ module junit.platform.engine {
     exports org.junit.platform.engine.support.descriptor;
     exports org.junit.platform.engine.support.filter;
     exports org.junit.platform.engine.support.hierarchical;
-
-    uses org.junit.platform.engine.TestEngine;
 }
