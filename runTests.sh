@@ -5,12 +5,18 @@ export IDEA_JUNIT_PLUGIN_LIBS="/Applications/IntelliJ IDEA CE.app/Contents/plugi
 
 #org.junit.mytests.SimpleTest                         -> works
 #org.junit.platform.commons.util.CollectionUtilsTests -> doesn't work
-echo "Run org.junit.mytests.SimpleTest using module path"
+echo "Run org.junit.mytests.SimpleTest by Intellij IDEA JUnit runner using module path"
 ${JAVA_HOME}/bin/java \
 -p mlib:lib \
 --add-modules junit.jupiter.engine,junit.jupiter.params,junit.platform.launcher \
 -cp "${IDEA_LIBS}/idea_rt.jar:${IDEA_JUNIT_PLUGIN_LIBS}/junit-rt.jar:${IDEA_JUNIT_PLUGIN_LIBS}/junit5-rt.jar:platform-tests/build/classes/java/test:classpath/byte-buddy-agent-1.6.11.jar:classpath/byte-buddy-agent-1.6.11.jar" \
 com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 -junit5 org.junit.mytests.SimpleTest
+
+echo "Run org.junit.mytests.SimpleTest by org.junit.platform.console.ConsoleLauncher using module path"
+${JAVA_HOME}/bin/java \
+-p mlib:lib \
+-cp "platform-tests/build/classes/java/test:classpath/byte-buddy-agent-1.6.11.jar:classpath/byte-buddy-agent-1.6.11.jar" \
+-m junit.platform.console -c org.junit.mytests.SimpleTest
 
 #echo "Run org.junit.platform.commons.util.CollectionUtilsTests using classpath"
 #${JAVA_HOME}/bin/java \
