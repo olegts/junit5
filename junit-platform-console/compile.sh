@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export JAVA_HOME=/Users/oleg_tsal-tsalko/dev/jdk-9.jdk/Contents/Home
+#export JAVA_HOME=/Users/oleg_tsal-tsalko/dev/jdk-9.jdk/Contents/Home
 
 echo
 echo "*** Compiling junit.platform.console module ***"

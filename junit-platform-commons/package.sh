@@ -1,8 +1,6 @@
 #!/bin/bash
 
-export JAVA_HOME=/Users/oleg_tsal-tsalko/dev/jdk-9.jdk/Contents/Home
-
-mkdir -p mlib
+#export JAVA_HOME=/Users/oleg_tsal-tsalko/dev/jdk-9.jdk/Contents/Home
 
 echo
 echo "*** Packaging junit.platform.commons module into modular JAR ***"
