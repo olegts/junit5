@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#export JAVA_HOME=/Users/oleg_tsal-tsalko/dev/jdk-9.jdk/Contents/Home
+if [ -z ${JAVA_HOME} ]; then
+    echo "Please set you JAVA_HOME to point to your Java 9 distribution. See MIGRATION.md for more details"
+fi
 
 echo
 echo "*** Packaging junit.jupiter.params module into modular JAR ***"
-${JAVA_HOME}/bin/jar --create \
-    --file ../mlib/junit.jupiter.params@5.0.0.jar \
-    --module-version 5.0.0 \
-    -C mods/junit.jupiter.params .
+${JAVA_HOME}/bin/jar
+    #!/*TODO: Package mods/junit.jupiter.params binaries into mlib/junit.jupiter.params@5.0.0.jar*/

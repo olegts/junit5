@@ -1,9 +1,10 @@
 #!/bin/bash
 
-#export JAVA_HOME=/Users/oleg_tsal-tsalko/dev/jdk-9.jdk/Contents/Home
+if [ -z ${JAVA_HOME} ]; then
+    echo "Please set you JAVA_HOME to point to your Java 9 distribution. See MIGRATION.md for more details"
+fi
 
 echo
 echo "*** Compiling junit.platform.runner module ***"
-${JAVA_HOME}/bin/javac --module-path=../mlib:../lib \
-    -d mods/junit.platform.runner \
-    $(find src/main/java -name "*.java")
+${JAVA_HOME}/bin/javac
+    #!/*TODO: Compile junit-platform-runner sources into mods/junit.platform.runner folder*/

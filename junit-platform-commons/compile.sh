@@ -6,6 +6,5 @@ fi
 
 echo
 echo "*** Compiling junit.platform.commons module ***"
-${JAVA_HOME}/bin/javac --module-path=mods \
-    -d mods/junit.platform.commons \
-    $(find src/main/java -name "*.java")
+${JAVA_HOME}/bin/javac
+    #!/*TODO: Compile junit-platform-commons sources into mods/junit.platform.commons folder*/

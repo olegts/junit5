@@ -1,9 +1,10 @@
 #!/bin/bash
 
-#export JAVA_HOME=/Users/oleg_tsal-tsalko/dev/jdk-9.jdk/Contents/Home
+if [ -z ${JAVA_HOME} ]; then
+    echo "Please set you JAVA_HOME to point to your Java 9 distribution. See MIGRATION.md for more details"
+fi
 
 echo
 echo "*** Compiling junit.jupiter.api module ***"
-${JAVA_HOME}/bin/javac --module-path=../mlib:../lib \
-    -d mods/junit.jupiter.api \
-    $(find src/main/java -name "*.java")
+${JAVA_HOME}/bin/javac
+    #!/*TODO: Compile junit-jupiter-api sources into mods/junit.jupiter.api folder*/

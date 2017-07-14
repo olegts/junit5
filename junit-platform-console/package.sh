@@ -1,11 +1,10 @@
 #!/bin/bash
 
-#export JAVA_HOME=/Users/oleg_tsal-tsalko/dev/jdk-9.jdk/Contents/Home
+if [ -z ${JAVA_HOME} ]; then
+    echo "Please set you JAVA_HOME to point to your Java 9 distribution. See MIGRATION.md for more details"
+fi
 
 echo
 echo "*** Packaging junit.platform.console module into modular JAR ***"
-${JAVA_HOME}/bin/jar --create \
-    --file ../mlib/junit.platform.console@1.0.0.jar \
-    --module-version 1.0.0 \
-    --main-class=org.junit.platform.console.ConsoleLauncher \
-    -C mods/junit.platform.console .
+${JAVA_HOME}/bin/jar
+    #!/*TODO: Package mods/junit.platform.console binaries into mlib/junit.platform.console@1.0.0.jar*/

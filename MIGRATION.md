@@ -48,7 +48,7 @@ We gonna migrate JUnit 5 modules one-by-one in bottom-up manner in following ord
 
 > [NOTE]: Migration of other modules is out of scope...
 
-At root of each module you gonna find README.md file with simple instructions and hints.
+At root of each module you gonna find MIGRATION.md file with simple instructions and hints.
 Although you'll need to do similar steps in order to migrate each module one-by-one...
 Basically for each module you should correctly define `module-info.java` under `src/main/java`
 and implement `compile.sh` and `package.sh` scripts:
@@ -56,7 +56,7 @@ and implement `compile.sh` and `package.sh` scripts:
 - `package.sh` script should then package your module binaries as modular JAR and place it into `mlib` folder at the root of the project
 
 > [NOTE]: You have all necessary 3rd party libraries in `libs` directory at the root of the project.
-Couple of other libraries are placed into `classpath` folder which shouldn't be used on module path. See README.md file why.
+Couple of other libraries are placed into `classpath` folder which shouldn't be used on module path. See MIGRATION.md file why.
 
 Please refer to following modules dependencies graph in order to better understand migration approach - http://junit.org/junit5/docs/current/user-guide/#dependency-diagram
 
