@@ -11,4 +11,6 @@ module junit.vintage.engine {
     exports org.junit.vintage.engine.descriptor;
     exports org.junit.vintage.engine.discovery;
     exports org.junit.vintage.engine.execution;
+
+    provides org.junit.platform.engine.TestEngine with org.junit.vintage.engine.VintageTestEngine;
 }
