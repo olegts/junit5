@@ -1,10 +1,10 @@
-#JUNIT 5 MIGRATION TO JAVA 9 MODULES
+# JUNIT 5 MIGRATION TO JAVA 9 MODULES
 
 This is a small guide on how to partially migrate JUnit 5 platform to Java 9 modules.
 This is more a case study for "*JUG Java 9 Jigsaw HackSession*" rather than complete migration of JUnit 5 platform to Java 9.
 The goal is to show iterative approach of migrating real-life multi-module project to Java 9.
 
-##PREREQUISITES
+## PREREQUISITES
 
 1. Please make sure you have JDK 9 installed/available on your machine and ensure that `${JAVA_HOME}` is correctly set.
 You can download latest JDK 9 Jigsaw early access build from here - http://jdk.java.net/jigsaw.
@@ -15,24 +15,24 @@ I was using `9-ea+175-jigsaw-nightly` build.
 3. In this case study we gonna use `.sh` scripts, so if you are on Windows machine please make sure you have `cygwin` or any other tool available for you.
 Alternatively of course you can use similar `.bat` scripts if you like though...
 
-##IMPORT AND BUILD
+## IMPORT AND BUILD
 
-###Intellij IDEA
+### Intellij IDEA
 
 Import project as Gradle project and all submodules should be correctly resolved and imported.
 You can use Java 9 SDK and Java 9 language level in IDEA.
 Latest versions of Intellij IDEA already have support for Java 9 modules. I was using `2017.1.4 CE` version.
 See https://www.jetbrains.com/help/idea/2017.1/getting-started-with-java-9-module-system.html for more details.
 
-###Gradle
+### Gradle
 Build project as normal Gradle project with 1.8 source and target level.
 See original JUnit 5 README.md file for more details.
 I haven't tried to make Gradle to build project for Java 9.
 You can play with that but it's out of scope for this case study...
-> [NOTE]: Along the way once you start adding `module-info.java` descriptors to your modules your Gradle build might fail. 
-In this case please use `unapplyModules.sh` and `reapplyModules.sh` scripts to switch between working Gradle build and working Java 9 custom build scripts...   
+> [NOTE]: Along the way once you start adding `module-info.java` descriptors to your modules your Gradle build might fail.
+In this case please use `unapplyModules.sh` and `reapplyModules.sh` scripts to switch between working Gradle build and working Java 9 custom build scripts...
 
-##MIGRATION STEPS
+## MIGRATION STEPS
 
 We gonna migrate JUnit 5 modules one-by-one in bottom-up manner in following order:
 - junit-platform-commons
@@ -60,7 +60,7 @@ Couple of other libraries are placed into `classpath` folder which shouldn't be 
 
 Please refer to following modules dependencies graph in order to better understand migration approach - http://junit.org/junit5/docs/current/user-guide/#dependency-diagram
 
-##FINAL STEP
+## FINAL STEP
 
 Once all modules have been successfully migrated you should have all your module JARs in `mlib` folder ready to be used.
 You can use `rebuildAll.sh` script to rebuild all your modules if necessary.
