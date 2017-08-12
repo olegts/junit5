@@ -10,7 +10,7 @@ ${JAVA_HOME}/bin/jdeps -s build/libs/junit-platform-commons-1.0.0-SNAPSHOT.jar
 
 echo
 echo "*** JAR dependencies info ***"
-${JAVA_HOME}/bin/jdeps buRild/libs/junit-platform-commons-1.0.0-SNAPSHOT.jar
+${JAVA_HOME}/bin/jdeps build/libs/junit-platform-commons-1.0.0-SNAPSHOT.jar
 
 echo
 echo "*** Automatic module preview ***"
